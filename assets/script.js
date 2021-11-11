@@ -1,13 +1,12 @@
-var questions = [
 
-    {
-        prompt: "What is the DOM not?"
+// const startButton = document.getElementById('start')
 
-    }
-]
+// startButton.addEventListener('click', startGame)
 
-for (var i = 0; i < questions.length; i++) {
+// function startGame() {
+//     console.log("its startig")
+// }
 
-    var response
+function setNextQuestion() {
 
 }
