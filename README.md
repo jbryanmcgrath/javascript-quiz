@@ -168,3 +168,31 @@ loadQuestions();
 </body>
 
 </html>
+
+        </artice>
+        <div id="topScoresPage">
+            <header>
+                <div class="container" style="padding-top: 20px;">
+                    <a href="./index.html">Home</a>
+                </div>
+            </header>
+            <section>
+                <h1 style="text-align: center; padding-top: 50px;">
+                    TOP SCORES!
+                </h1>
+                <div>
+                    <ol>
+
+                    </ol>
+                </div>
+            </section>
+        </div>
+
+
+headerLinks.style.display = "none";
+questionBox.style.display = "none";
+multipleChoicePossibleAnswers.style.display = "none";
+correctNotification.style.display = "none";
+incorrectNotification.style.display = "none";
+nextButton.style.display = "none";
+topScoresPage.style.display = "none";

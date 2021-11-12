@@ -28,28 +28,31 @@ let topScoresPage = document.querySelector('#topScoresPage')
 //TopScoresPage
 
 //hiding things for home page
-
 headerLinks.style.display = "none";
 questionBox.style.display = "none";
 multipleChoicePossibleAnswers.style.display = "none";
 correctNotification.style.display = "none";
 incorrectNotification.style.display = "none";
 nextButton.style.display = "none";
-topScoresPage.style.display = "none";
+
 
 start.addEventListener('click', () => {
     home.style.display = "none"
     headerLinks.style.display = "block"
     questionBox.style.display = "block"
     multipleChoicePossibleAnswers.style.display = "block"
-})
+    var sec = 15;
+    var time = setInterval(myTimer, 1000);
 
-// const questions = [
-//     "Commonly used data types DO NOT include",
-//     "The condition in an if/else statement is enclosed with _________.",
-//     "Arrays in JavaScript can be used to store _________.",
-//     "String values must be enclosed within _____ when being assigned to variables.",
-// ]
+    function myTimer() {
+        document.getElementById('timer').innerHTML = sec + "sec left";
+        sec--;
+        if (sec == -1) {
+            clearInterval(time);
+            alert("Out of Time!! :(");
+        }
+    }
+})
 
 const questions = [
     {
@@ -84,26 +87,16 @@ const questions = [
         d: 'numbers',
         correctAnswer: 'quotes'
     },
-
-    
-
+]
 
 
 
 
 
 
-var sec = 15;
-var time = setInterval(myTimer, 1000);
 
-function myTimer() {
-    document.getElementById('timer').innerHTML = sec + "sec left";
-    sec--;
-    if (sec == -1) {
-        clearInterval(time);
-        alert("Out of Time!! :(");
-    }
-}
+
+
 
 
 
