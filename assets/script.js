@@ -1,67 +1,112 @@
-let correctNotification = document.querySelector('#correctNotification');
+let home = document.querySelector('#home')
+//hide whole section with this variable
+let start = document.querySelector('#start')
+//start button to hide everything but questions and answers
+let highRollers = document.querySelector('#highRollers')
+//hide everything but high score situation
+let headerLinks = document.querySelector('#headerLinks')
+//header links div
+let questionBox = document.querySelector('#questionBox')
+//variable to pass questions in to
+let multipleChoicePossibleAnswers = document.querySelector('#multipleChoicePossibleAnswers')
+//div of all questions
+let aAnswer = document.querySelector('#aAnswer')
+//variable for answer a
+let bAnswer = document.querySelector('#bAnswer')
+//variable for answer b
+let cAnswer = document.querySelector('#cAnswer')
+//variable for answer c
+let dAnswer = document.querySelector('#dAnswer')
+//variable for answer d
+let correctNotification = document.querySelector('#correctNotification')
+//correct answer
+let incorrectNotification = document.querySelector('#incorrectNotification')
+//incorrect answer
+let nextButton = document.querySelector('#nextButton')
+//next Buttton
+let topScoresPage = document.querySelector('#topScoresPage')
+//TopScoresPage
 
+//hiding things for home page
+
+headerLinks.style.display = "none";
+questionBox.style.display = "none";
+multipleChoicePossibleAnswers.style.display = "none";
 correctNotification.style.display = "none";
-
-let incorrectNotification = document.querySelector('#incorrectNotification');
-
 incorrectNotification.style.display = "none";
-
-
-let nextButton = document.querySelector('#nextButton');
-
 nextButton.style.display = "none";
+topScoresPage.style.display = "none";
 
+start.addEventListener('click', () => {
+    home.style.display = "none"
+    headerLinks.style.display = "block"
+    questionBox.style.display = "block"
+    multipleChoicePossibleAnswers.style.display = "block"
+})
+
+// const questions = [
+//     "Commonly used data types DO NOT include",
+//     "The condition in an if/else statement is enclosed with _________.",
+//     "Arrays in JavaScript can be used to store _________.",
+//     "String values must be enclosed within _____ when being assigned to variables.",
+// ]
 
 const questions = [
     {
         question: "Commonly used data types DO NOT include",
-        answers: {
-            1: 'strings',
-            2: 'booleans',
-            3: 'alerts',
-            4: 'numbers',
-        },
-        correctAnswer: '3'
+        a: 'strings',
+        b: 'booleans',
+        c: 'alerts',
+        d: 'numbers',
+        correctAnswer: 'alerts'
     },
     {
         question: "The condition in an if/else staement is enclosed with _________.",
-        answers: {
-            1: 'quotes',
-            2: 'curly brackets',
-            3: 'parenthesis',
-            4: 'square brackets',
-        },
-        correctAnswer: '3'
+        a: 'quotes',
+        b: 'parenthesis',
+        c: 'curly brackets',
+        d: 'square brackets',
+        correctAnswer: 'parenthesis'
     },
     {
         question: "Arrays in JavaScript can be used to store _________.",
-        answers: {
-            1: "numbers and strings",
-            2: "other arrays",
-            3: "booleans",
-            4: "all of the above",
-        },
-        correctAnswer: '4',
+        a: 'numbers and strings',
+        b: 'booleans',
+        c: 'alerts',
+        d: 'all of the above',
+        correctAnswer: 'all of the above'
     },
     {
         question: "String values must be enclosed within _____ when being assigned to variables.",
-        answers: {
-            1: 'commas',
-            2: 'curly brackets',
-            3: 'quotes',
-            4: 'parenthesis',
-        },
-        correctAnswer: '3',
+        a: 'commas',
+        b: 'curly brackets',
+        c: 'quotes',
+        d: 'numbers',
+        correctAnswer: 'quotes'
     },
-    {
-        question: 'A very useful tool used during development and debugging for printing content to the debugger is:',
-        answers: {
-            1: "Javascript",
-            2: "terminal/bash",
-            3: "for loops",
-            4: "console.log",
-        },
-        correctAnswer: "4",
+
+    
+
+
+
+
+
+
+
+var sec = 15;
+var time = setInterval(myTimer, 1000);
+
+function myTimer() {
+    document.getElementById('timer').innerHTML = sec + "sec left";
+    sec--;
+    if (sec == -1) {
+        clearInterval(time);
+        alert("Out of Time!! :(");
     }
-]
+}
+
+
+
+
+
 

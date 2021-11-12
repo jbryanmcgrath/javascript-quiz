@@ -13,30 +13,93 @@
 </head>
 
 <body>
-    <div class="container ">
+    <!-- Home Page Layout -->
+    <div class="container" id="home">
         <div id="home" class=" row flex-column flex-center">
             <h1 id="readyToRock" class="col">Take this
                 timed Javascript Quiz to test your knowledge. Ready to Rock?</h1>
-            <a id='start' href="game.html" class="btn col btn-primary btn-lg">Play a round!</a>
-            <a id="highRollers" href="highscores.html" class="btn col btn-secondary btn-lg">High Rollers.</a>
+            <a id='start' class="btn col btn-primary btn-lg">Play a round!</a>
+            <a id="highRollers" class="btn col btn-secondary btn-lg">High Rollers.</a>
         </div>
     </div>
+    <!-- End Home Page Layout -->
+
+    <!-- Header showing links to High Scores, home, and the timer -->
+    <header class="container">
+        <div class="row" id="headerLinks">
+            <div class="col" style="text-align: center; padding-top: 20px;">
+                <a href="highscores.html" id="highScoreGameLink">High Rollers</a>
+            </div>
+            <div class="col" style="text-align: center; padding-top: 20px;">
+                <a href="index.html" id="homeLink">Home</a>
+            </div>
+            <div class="col" style="text-align: center; padding-top: 20px;">
+                <span id="timer"></span>
+            </div>
+        </div>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Question and answer and incorrect/correct and next button section -->
+    <section class="container">
+        <div class="row">
+            <h1 class="col" style="text-align: center; padding-top: 100px;" id="c">
+            </h1>
+        </div>
+        <div class="row" id="multipleChoicePossibleAnswers">
+            <div>
+                <a class="btn btn-primary btn-lg active col-3" style="margin-top: 15px;     margin-bottom: 15px;"
+                    role=" button" aria-pressed="true" id="aAnswer">A- Testing</a>
+            </div>
+            <div>
+                <a class="btn btn-primary btn-lg active col-3" style="margin-top: 15px; margin-bottom: 15px;" role="
+                    button" aria-pressed="true" id="bAnswer">A - TESTING</a>
+            </div>
+            <div>
+                <a class="btn btn-primary btn-lg active col-3" style="margin-top: 15px; margin-bottom: 15px;"
+                    role=" button" aria-pressed="true" id="cAnswer">A - TESTING</a>
+            </div>
+            <div>
+                <a class="btn btn-primary btn-lg active col-3" style="margin-top: 15px; margin-bottom: 15px;"
+                    role=" button" aria-pressed="true" id="dAnswer">A - TESTING</a>
+            </div>
+        </div>
+
+        <artice class="container">
+            <div id="correctNotification" class="row border-bottom">
+                <p>Correct!</p>
+            </div>
+            <div id="incorrectNotification" class="row border-bottom">
+                <p>Sorry, Incorrect.</p>
+            </div>
+            <div>
+                <button id="nextButton" class="btn btn-primary">Next</button>
+            </div>
+        </artice>
+        <div id="topScoresPage">
+            <header>
+                <div class="container" style="padding-top: 20px;">
+                    <a href="./index.html">Home</a>
+                </div>
+            </header>
+            <section>
+                <h1 style="text-align: center; padding-top: 50px;">
+                    TOP SCORES!
+                </h1>
+                <div>
+                    <ol>
+
+                    </ol>
+                </div>
+            </section>
+        </div>
 
 
-
-
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-        crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
