@@ -25,6 +25,8 @@ let incorrectNotification = document.querySelector('#incorrectNotification')
 let nextButton = document.querySelector('#nextButton')
 //next Buttton
 let topScoresPage = document.querySelector('#topScoresPage')
+let myQuestion = document.querySelector('.my-question')
+var index;
 //TopScoresPage
 
 //hiding things for home page
@@ -52,11 +54,46 @@ start.addEventListener('click', () => {
             alert("Out of Time!! :(");
         }
     }
-})
+    index = 0;
 
-const questions = [
+
+    displayQuestions(index);
+    displayAnswers(index);
+
+    // 1. have a checker for someone clicking on an answer.
+    // check if the answer is correct
+    //cycle through on click
+})
+//put checkQuestion inside of click function that checks answers.
+//checkQuestion(index);
+function checkQuestion(index) {
+    nextSet(index);
+}
+function nextSet(index) {
+    index++;
+    displayQuestions(index);
+    displayAnswers(index);
+    //put checkQuestion inside of click function that checks answers. 
+    //checkQuestion(index);
+    console.log(index)
+}
+
+// displaying cycling questions on clicks
+function displayQuestions(index) {
+    myQuestion.innerHTML = questionsArray[index].question;
+
+}
+//displaying cycling answers 
+function displayAnswers(index) {
+    aAnswer.innerHTML = questionsArray[index].a;
+    bAnswer.innerHTML = questionsArray[index].b;
+    cAnswer.innerHTML = questionsArray[index].c;
+    dAnswer.innerHTML = questionsArray[index].d;
+}
+//index
+const questionsArray = [
     {
-        question: "Commonly used data types DO NOT include",
+        question: "Commonly used data types DO NOT include.....",
         a: 'strings',
         b: 'booleans',
         c: 'alerts',
