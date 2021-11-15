@@ -64,8 +64,7 @@ start.addEventListener('click', () => {
     // check if the answer is correct
     //cycle through on click
 })
-//put checkQuestion inside of click function that checks answers.
-//checkQuestion(index);
+
 function checkQuestion(index) {
     nextSet(index);
 }
